@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Us | Hotel Excel Solutions</title>
+
+<style>
+:root {
+  --primary: #0f2b48;
+  --accent: #1bb59b;
+  --accent-hover: #15937d;
+  --light-bg: #f4f7f9;
+  --text-dark: #2c3e50;
+  --text-muted: #666666;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: var(--light-bg);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  background: var(--primary);
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header img {
+  height: 100px;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 0.95rem;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+.btn-quote {
+  background: var(--accent);
+  color: var(--white);
+  padding: 8px 18px;
+  border-radius: 4px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-quote:hover {
+  background: var(--accent-hover);
+}
+
+/* HERO */
+.hero {
+  background: var(--white);
+  padding: 3rem 5%;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+/* CONTENT */
+.container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 5%;
+}
+
+.section {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  border: 1px solid #e1e8ed;
+}
+
+.section h2 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.feature {
+  margin-bottom: 1.5rem;
+}
+
+.feature h3 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.feature p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* CTA */
+.cta {
+  background: var(--primary);
+  color: var(--white);
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.cta p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.cta .btn-quote {
+  background: var(--white);
+  color: var(--primary);
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="logo.png" alt="Hotel Excel Solutions">
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="whyus.html">Why Us</a>
+    <a href="#" onclick="openModal()">Contact</a>
+  </nav>
+  <button class="btn-quote" onclick="openModal()">Request a Quote</button>
+</header>
+
+<section class="hero">
+  <h1>Why Choose Hotel Excel Solutions?</h1>
+  <p>Precision. Experience. Automation. Everything your hotel accounting team needs to operate at peak efficiency.</p>
+</section>
+
+<div class="container">
+
+  <div class="section">
+    <h2>Industry Expertise You Can Trust</h2>
+    <div class="feature">
+      <h3>Director‑Level Accounting Experience</h3>
+      <p>Every template, automation, and workflow is built by a former Director of Finance with real hotel operational experience. You’re not getting generic spreadsheets — you’re getting tools built by someone who has lived your challenges.</p>
+    </div>
+
+    <div class="feature">
+      <h3>Purpose‑Built for Hotels</h3>
+      <p>Our solutions are designed specifically for hospitality accounting: PMS data, occupancy tax, credit card settlements, bank recs, income journals, and more.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Automation That Saves Hours Every Week</h2>
+    <div class="feature">
+      <h3>Smart Excel + VBA Engineering</h3>
+      <p>We build tools that eliminate repetitive tasks, reduce human error, and streamline your month‑end close. Your team gets more time back — and fewer headaches.</p>
+    </div>
+
+    <div class="feature">
+      <h3>Customized to Your Property</h3>
+      <p>No two hotels operate the same. Every solution is tailored to your PMS, your chart of accounts, your tax structure, and your reporting needs.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Reliable Support & Zero‑Risk Guarantee</h2>
+    <div class="feature">
+      <h3>Fast Turnaround</h3>
+      <p>Most projects are completed within one week — even complex builds.</p>
+    </div>
+
+    <div class="feature">
+      <h3>Affordable Updates</h3>
+      <p>Need a tweak or enhancement later? Minor updates start at just $50.</p>
+    </div>
+
+    <div class="feature">
+      <h3>100% Satisfaction Guarantee</h3>
+      <p>If you're not satisfied with the delivered solution, your deposit is refunded. No risk, no hassle.</p>
+    </div>
+  </div>
+
+  <div class="cta">
+    <p>Ready to upgrade your hotel’s financial workflow?</p>
+    <button class="btn-quote" onclick="openModal()">Request a Quote</button>
+  </div>
+
+</div>
+
+<!-- MODAL (same as your main site) -->
+<div class="modal" id="quoteModal" style="display:none;">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2 style="color: var(--primary); margin-bottom: 1rem;">Request a Quote</h2>
+
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="4892f52e-7f57-4a6a-965e-d0a2a66b66ae">
+
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" name="Name" required>
+      </div>
+
+      <div class="form-group">
+        <label>Hotel / Property Name</label>
+        <input type="text" name="Property" required>
+      </div>
+
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" name="Email" required>
+      </div>
+
+      <div class="form-group">
+        <label>Services Needed</label>
+        <textarea name="Services" rows="3"></textarea>
+      </div>
+
+      <button type="submit" class="btn-quote" style="width:100%;">Submit Request</button>
+    </form>
+  </div>
+</div>
+
+<script>
+function openModal() {
+  document.getElementById('quoteModal').style.display = 'flex';
+}
+
+function closeModal() {
+  document.getElementById('quoteModal').style.display = 'none';
+}
+
+window.onclick = function(event) {
+  const modal = document.getElementById('quoteModal');
+  if (event.target === modal) {
+    closeModal();
+  }
+}
+</script>
+
+</body>
+</html>
