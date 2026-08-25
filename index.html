@@ -84,15 +84,13 @@ nav a:hover {color:var(--accent);}
   margin:auto;
 }
 
-/* GRID — CORPORATE UNIFORM CARDS */
+/* GRID — FIXED SPACING */
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  column-gap: 2rem;   /* horizontal spacing */
-  row-gap: 3rem;      /* NEW: more vertical spacing */
-  align-items: stretch;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  gap:3rem; /* increased vertical spacing */
+  align-items:stretch;
 }
-
 
 /* CARD — CORPORATE STYLE */
 .card {
