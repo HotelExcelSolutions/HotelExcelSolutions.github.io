@@ -1,65 +1,559 @@
-<!doctype html>
-<html lang="en" class="no-js">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Excel Solutions LLC</title>
-    <meta name="description" content="OP Excel Guru Info">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hotel Excel Solutions | Automated Hotel Accounting</title>
+
+<style>
+:root {
+  --primary: #0f2b48;
+  --accent: #1bb59b;
+  --accent-hover: #15937d;
+  --light-bg: #f4f7f9;
+  --text-dark: #2c3e50;
+  --text-muted: #666666;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  color: var(--text-dark);
+  background-color: var(--light-bg);
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+header {
+  background: var(--primary);
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header img {
+  height: 100px;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+.btn-quote {
+  background: var(--accent);
+  color: var(--white);
+  padding: 8px 18px;
+  border-radius: 4px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-quote:hover {
+  background: var(--accent-hover);
+}
+
+/* HERO */
+.hero {
+  background: var(--white);
+  padding: 4rem 5%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.hero-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* MAIN GRID */
+.container {
+  padding: 3rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.layout-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 850px) {
+  .layout-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* SERVICES */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  border: 1px solid #e1e8ed;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-weight: bold;
+  color: var(--primary);
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.btn-card {
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.btn-card:hover {
+  background: var(--accent);
+}
+
+/* ADVANTAGE */
+.advantage-box {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #e1e8ed;
+}
+
+.advantage-box h2 {
+  color: var(--primary);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.feature-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 1.2rem;
+}
+
+.feature-item strong {
+  display: block;
+  color: var(--primary);
+  font-size: 0.95rem;
+}
+
+.feature-item p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* STEPS */
+.steps-box {
+  background: var(--accent);
+  color: var(--white);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+}
+
+.steps-box h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.steps-list {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.step {
+  flex: 1;
+}
+
+.step-num {
+  background: rgba(255,255,255,0.2);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 5px auto;
+  font-weight: bold;
+}
+
+.step p {
+  font-size: 0.75rem;
+}
+
+/* FOOTER */
+.guarantee-banner {
+  background: var(--primary);
+  color: var(--white);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.guarantee-text p {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+</style>
 </head>
 
 <body>
-	<header>
-		<img src="logo.png" width="415" height="100">
-	</header>
-	<section>
-		<strong>Excel Automation focused on Bank Reconciliations, Monthly Tax Reconciliations, Daily Tax Reconciliations, Income Journals, Credit Card Reconciliation, and anything else you may need.</strong>
-	</section>
-	<section id="pageContent">
-		<main role="main">
-			<article>
-				<h2>Bank Reconciliations</h2>
-				<p>If you can provide a couple months of bank activity in Excel along with the GL showing the bank activity, we can utilize that information to automate the bank rec for you going forward. We'll also provide recommendations on how to simplify the process and make it easier and more accurate. Estimated $1,000.</p>
-			</article>
-			<article>
-				<h2>Monthly Tax Reconciiliations</h2>
-				<p>With a copy of your trial balance report, P&L, and tax filing calculations from the prior couple months, we can review & provide an automated tool to match your process. We will not be auditing the accuracy of the tax reconciliation just providing a tool based on what is provided. Estimated $1,000.</p>
-			</article>
-            		<article>
-				<h2>Daily Tax Reconciliations</h2>
-				<p>If you choose to allow us to build out your Monthly Tax Reconciliations & Income Journal, we can also provide a file that confirms the taxes on a daily basis utilizing the same information & providing variances that should be researched & corrected or offset with tax exemption documentation. Estimated $250.</p>
-			</article>
-			<article>
-				<h2>Income Journal</h2>
-				<p>With the excel versions of all the PMS/POS/Other reports utilized to create the Income Journal and a few completed Income Journals we will build tools that automatically compile the data for you, the only thing we can't do is automate the Miscellaneous posts. Estimated Costs range from $500 - $5,000 depending on the complexity of the property.</p>
-			</article>
-			<article>
-				<h2>Credit Card Reconciliation</h2>
-				<p>If provided with the POS credit card activity, PMS credit card activity, Payment Gateway Batches, & Merchant Services Batches we can provide a tool that reconciles each transaction and lets you know exactly which credit card transactions did or did not go through. Estimated $500.</p>
-			</article>
-		</main>
-		<aside>
-			<div>Let us bring consistency and reliability to you at a small one-time cost.</div>
-			<div>Once our initial services are purchased, we can do minor updates for as little as $50 when things change.</div>
-            		<div>We are a group of professional accountants with Director of Finance, Complex Director of Finance, & Task Force Director of Finance experience in various states.</div>
-			<div>We are open to helping in any way we can, let us know what you need, and we will do our best to assist.</div>
-		    	<div>We aim to complete all requests within a week.</div>
-		    	<div>We will review the file in detail with you after it's completed and allow testing to ensure it works properly & adjust as necessary until you're satisfied.</div>
-		    	<div>Zero Risk: If you aren't satisfied with the result, we will refund the initial deposit.</div>
-		</aside>
-	</section>
-	<footer>
-		<p>If you're interested please reach out to us via email and we will be back with you promptly, once services are agreed we do require 50% up front and 50% after you're satisfied with the results, at which point we will provide you with the tool. All files will be in Excel utilizing a combination of formulas & VBA code to generate desired results based on the data provided.</p>
-		<A href="https://www.youtube.com/watch?v=sI2TtWas6jk">Sales Example</A>
-		<A href="https://www.youtube.com/watch?v=2QDO5ViDmw8&t=15s">Generic Accounting Examples</A>
-		<address>
-			Contact: <a href="mailto:hotelexcelsolutions@gmail.com">HotelExcelSolutions@gmail.com</a>
-		</address>
-	</footer>
 
+<header>
+  <img src="logo.png" width="415" height="100">
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#advantage">Why Us</a>
+    <a href="#contact" onclick="openModal()">Contact</a>
+  </nav>
+  <button class="btn-quote" onclick="openModal()">Request a Quote</button>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Streamline Your Hotel's Financial Operations.</h1>
+    <p>Automated Excel Solutions Built by Industry Accounting Experts.</p>
+    <button class="btn-quote" onclick="openModal()">Get Started Today</button>
+  </div>
+
+  <div class="hero-image">
+    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Financial Analytics Dashboard">
+  </div>
+</section>
+
+<div class="container">
+  <div class="layout-grid">
+
+    <!-- SERVICES -->
+    <div id="services">
+      <div class="services-grid">
+
+        <div class="card">
+          <div>
+            <div class="card-icon">📊</div>
+            <h3>Bank Reconciliations</h3>
+            <p>Automated & accurate reconciliation setups built for fast matching.</p>
+          </div>
+          <div>
+            <span class="price">Starting at $1,000</span>
+            <button class="btn-card" onclick="openModal()">Automate Now</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="card-icon">🧾</div>
+            <h3>Monthly Tax Reconciliations</h3>
+            <p>Insightful, bulletproof tax reporting tailored for hotel audits.</p>
+          </div>
+          <div>
+            <span class="price">Starting at $1,000</span>
+            <button class="btn-card" onclick="openModal()">Automate Now</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="card-icon">📅</div>
+            <h3>Daily Tax Reconciliations</h3>
+            <p>Stay on top of daily room and occupancy tax collections effortlessly.</p>
+          </div>
+          <div>
+            <span class="price">Just $250 with Monthly Recs</span>
+            <button class="btn-card" onclick="openModal()">Automate Now</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="card-icon">📥</div>
+            <h3>Income Journal</h3>
+            <p>Automated data compilation from PMS directly into customized Excel formats.</p>
+          </div>
+          <div>
+            <span class="price">$500–$5,000 (Based on complexity)</span>
+            <button class="btn-card" onclick="openModal()">Automate Now</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="card-icon">💳</div>
+            <h3>Credit Card Reconciliation</h3>
+            <p>Transaction-level matching to catch merchant fee discrepancies fast.</p>
+          </div>
+          <div>
+            <span class="price">Custom Pricing</span>
+            <button class="btn-card" onclick="openModal()">Automate Now</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ADVANTAGE -->
+    <div id="advantage">
+      <div class="advantage-box">
+        <h2>The HotelExcel Advantage</h2>
+
+        <div class="feature-item">
+          <span>⭐</span>
+          <div>
+            <strong>Experienced Professionals</strong>
+            <p>Director of Finance level expertise behind every template.</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <span>🔧</span>
+          <div>
+            <strong>Ongoing Support</strong>
+            <p>Minor updates available for $50+.</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <span>🛡️</span>
+          <div>
+            <strong>Zero Risk Guarantee</strong>
+            <p>100% satisfaction or your deposit back.</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <span>⚡</span>
+          <div>
+            <strong>Rapid Turnaround</strong>
+            <p>Most projects completed within a single week.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="steps-box">
+        <h3>Getting Started</h3>
+        <div class="steps-list">
+          <div class="step">
+            <div class="step-num">1</div>
+            <p>Consultation</p>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <p>Development</p>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <p>Review & Handover</p>
+          </div>
+        </div>
+        <p style="font-size: 0.8rem; text-align: center; opacity: 0.9;">50% down payment to initiate project.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="guarantee-banner" id="contact">
+    <div class="guarantee-text">
+      <p><strong>Ready to simplify your hotel accounting?</strong> Reach out via email for a prompt response. All files are developed in native Excel utilizing formulas & VBA code tailored to your data.</p>
+    </div>
+    <button class="btn-quote" style="background: var(--white); color: var(--primary);" onclick="openModal()">Contact Us</button>
+  </div>
+
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="quoteModal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2 style="color: var(--primary); margin-bottom: 1rem;">Request a Quote</h2>
+
+    <form onsubmit="handleSubmit(event)">
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" required placeholder="John Doe">
+      </div>
+
+      <div class="form-group">
+        <label>Hotel / Property Name</label>
+        <input type="text" required placeholder="Grand Hotel">
+      </div>
+
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" required placeholder="john@hotel.com">
+      </div>
+
+      <div class="form-group">
+        <label>Services Needed</label>
+        <textarea rows="3" placeholder="Tell us which reconciliations or templates you need help with..."></textarea>
+      </div>
+
+      <button type="submit" class="btn-quote" style="width:100%;">Submit Request</button>
+    </form>
+
+  </div>
+</div>
+
+<script>
+function openModal() {
+  document.getElementById('quoteModal').style.display = 'flex';
+}
+
+function closeModal() {
+  document.getElementById('quoteModal').style.display = 'none';
+}
+
+window.onclick = function(event) {
+  const modal = document.getElementById('quoteModal');
+  if (event.target === modal) {
+    closeModal();
+  }
+}
+
+function handleSubmit(e) {
+  e.preventDefault();
+  alert("Thank you for your request! We will be in touch promptly.");
+  closeModal();
+}
+</script>
 
 </body>
-
 </html>
