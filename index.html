@@ -1,83 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hotel Excel Solutions</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hotel Excel Solutions</title>
+
+<style>
+:root {
+  --primary:#0f2b48;
+  --accent:#1bb59b;
+  --accent-hover:#15937d;
+  --light:#f4f7f9;
+  --text:#2c3e50;
+  --muted:#666;
+  --white:#fff;
+}
+
+/* GLOBAL */
+body {
+  margin:0;
+  font-family:Segoe UI, Tahoma, sans-serif;
+  background:var(--light);
+  color:var(--text);
+}
+
+/* HEADER */
+header {
+  background:var(--primary);
+  padding:1rem 5%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+header img {height:90px;}
+nav a {
+  color:var(--white);
+  margin:0 15px;
+  text-decoration:none;
+  font-size:.95rem;
+}
+nav a:hover {color:var(--accent);}
+.btn {
+  background:var(--accent);
+  color:var(--white);
+  padding:10px 20px;
+  border-radius:6px;
+  border:none;
+  cursor:pointer;
+  font-size:.9rem;
+  font-weight:600;
+}
+.btn:hover {background:var(--accent-hover);}
+
+/* HERO */
+.hero {
+  background:var(--white);
+  padding:3rem 5%;
+  display:flex;
+  flex-wrap:wrap;
+  gap:2rem;
+}
+.hero-text {flex:1; min-width:280px;}
+.hero-text h1 {
+  font-size:2.3rem;
+  color:var(--primary);
+  margin-bottom:.5rem;
+}
+.hero-text p {
+  color:var(--muted);
+  font-size:1rem;
+  margin-bottom:1.5rem;
+}
+.hero img {
+  max-width:480px;
+  width:100%;
+  border-radius:8px;
+}
+
+/* CONTAINER */
+.container {
+  padding:3rem 5%;
+  max-width:1200px;
+  margin:auto;
+}
+
+/* GRID — ORIGINAL BOX SIZES */
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+  gap:1.5rem; /* original spacing */
+}
+
+/* CARD — INTERNAL ALIGNMENT FIX ONLY */
+.card {
+  background:var(--white);
+  padding:1.5rem;
+  border-radius:8px;
+  border:1px solid #ddd;
+  text-align:center;
+
+  /* NEW: internal alignment without changing card height */
+  display:flex;
+  flex-direction:column;
+}
+
+.card h3 {
+  color:var(--primary);
+  margin-bottom:0.5rem;
+}
+
+.card p {
+  color:var(--muted);
+  font-size:.9rem;
+  line-height:1.4;
+
+  /* NEW: expands description area to align buttons */
+  flex-grow:1;
+}
+
+.price {
+  font-weight:bold;
+  margin:1rem 0;
+  color:var(--primary);
+}
+
+.card .btn {
+  margin-top:1rem;
+}
+
+/* BANNER */
+.banner {
+  background:#1bb59b;
+  color:#ffffff;
+  padding:1.5rem;
+  border-radius:8px;
+  margin-top:2rem;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:1rem;
+}
+.banner p {
+  color:#ffffff;
+  font-size:1rem;
+  line-height:1.6;
+  max-width:600px;
+}
+.banner .btn {
+  background:#ffffff;
+  color:#0f2b48;
+  font-weight:bold;
+}
+
+/* MODAL */
+.modal {
+  display:none;
+  position:fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background:rgba(0,0,0,.5);
+  justify-content:center;
+  align-items:center;
+}
+.modal-content {
+  background:var(--white);
+  padding:2rem;
+  border-radius:8px;
+  width:90%;
+  max-width:450px;
+  position:relative;
+}
+.close {
+  position:absolute;
+  top:10px; right:15px;
+  font-size:1.5rem;
+  cursor:pointer;
+}
+input,textarea {
+  width:100%;
+  padding:10px;
+  margin-bottom:1rem;
+  border:1px solid #ccc;
+  border-radius:6px;
+  font-size:.9rem;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <img src="logo.png" style="height:90px;">
-
+  <img src="logo.png">
   <nav>
-    <a href="index.html">Home</a>
+    <a href="#services">Services</a>
     <a href="whyus.html">Why Us</a>
     <a href="#" onclick="openModal()">Contact</a>
   </nav>
-
   <button class="btn" onclick="openModal()">Request a Quote</button>
 </header>
 
 <section class="hero">
-  <h1>Hotel Excel Solutions</h1>
-  <p>Custom Excel dashboards, automation, and reporting designed specifically for hotel operations.</p>
-  <button class="btn" onclick="openModal()">Get Started</button>
-</section>
-
-<section class="features">
-  <h2>What We Offer</h2>
-  <div class="feature-grid">
-    <div class="feature">
-      <h3>Automated Reports</h3>
-      <p>Stop spending hours on manual spreadsheets. We automate your daily, weekly, and monthly reporting.</p>
-    </div>
-    <div class="feature">
-      <h3>Custom Dashboards</h3>
-      <p>Visualize your hotel’s performance with clean, interactive dashboards built in Excel.</p>
-    </div>
-    <div class="feature">
-      <h3>Error‑Proof Templates</h3>
-      <p>We build templates that eliminate mistakes and streamline your workflow.</p>
-    </div>
+  <div class="hero-text">
+    <h1>Streamline Your Hotel’s Financial Operations</h1>
+    <p>Automated Excel solutions built by hotel accounting experts.</p>
+    <button class="btn" onclick="openModal()">Get Started</button>
   </div>
+  <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80">
 </section>
 
-<footer>
-  <p>© 2026 HotelExcelSolutions</p>
-</footer>
+<div class="container">
 
-<!-- CONTACT MODAL -->
-<div id="contactModal" class="modal">
+<h2 id="services" style="color:var(--primary); margin-bottom:1rem; font-size:1.6rem; font-weight:600;">Services</h2>
+
+<div class="grid">
+
+  <div class="card">
+    <h3>Bank Reconciliations</h3>
+    <p>Fast, automated matching for hotel bank activity.</p>
+    <div class="price">Starting at $1,000</div>
+    <button class="btn" onclick="openModal()">Automate</button>
+  </div>
+
+  <div class="card">
+    <h3>Monthly Tax Reconciliations</h3>
+    <p>Accurate occupancy & room tax reporting.</p>
+    <div class="price">Starting at $1,000</div>
+    <button class="btn" onclick="openModal()">Automate</button>
+  </div>
+
+  <div class="card">
+    <h3>Daily Tax Reconciliations</h3>
+    <p>Stay compliant with daily tax tracking.</p>
+    <div class="price">$250 with Monthly Recs</div>
+    <button class="btn" onclick="openModal()">Automate</button>
+  </div>
+
+  <div class="card">
+    <h3>Income Journal Automation</h3>
+    <p>PMS → Excel automation for daily revenue.</p>
+    <div class="price">$500–$5,000</div>
+    <button class="btn" onclick="openModal()">Automate</button>
+  </div>
+
+  <div class="card">
+    <h3>Credit Card Reconciliation</h3>
+    <p>Match deposits, fees, and PMS activity.</p>
+    <div class="price">Custom Pricing</div>
+    <button class="btn" onclick="openModal()">Automate</button>
+  </div>
+
+  <div class="card">
+    <h3>Temporary Contract Labor</h3>
+    <p>Remote hotel accounting coverage during turnover, leave, or peak periods.</p>
+    <div class="price">Flexible Weekly Rates</div>
+    <button class="btn" onclick="openModal()">Request Staffing</button>
+  </div>
+
+  <div class="card">
+    <h3>Fractional Director of Finance</h3>
+    <p>Remote fractional DOF oversight without full‑time payroll.</p>
+    <div class="price">Monthly Retainer</div>
+    <button class="btn" onclick="openModal()">Learn More</button>
+  </div>
+
+</div>
+
+<div class="banner">
+  <p><strong>Ready to simplify your hotel accounting?</strong><br>
+  From automated Excel tools to remote fractional DOF support, we help hotels operate smarter.</p>
+  <button class="btn" onclick="openModal()">Contact Us</button>
+</div>
+
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="quoteModal">
   <div class="modal-content">
     <span class="close" onclick="closeModal()">&times;</span>
-    <h2>Contact Us</h2>
+    <h2 style="color:var(--primary); margin-bottom:1rem;">Request a Quote</h2>
+
     <form action="https://api.web3forms.com/submit" method="POST">
-      <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
+      <input type="hidden" name="access_key" value="4892f52e-7f57-4a6a-965e-d0a2a66b66ae">
 
-      <label>Name</label>
-      <input type="text" name="name" required>
+      <input type="text" name="Name" placeholder="Your Name" required>
+      <input type="text" name="Property" placeholder="Hotel / Property Name" required>
+      <input type="email" name="Email" placeholder="Email Address" required>
+      <textarea name="Services" rows="3" placeholder="Tell us what you need..."></textarea>
 
-      <label>Email</label>
-      <input type="email" name="email" required>
-
-      <label>Message</label>
-      <textarea name="message" required></textarea>
-
-      <button class="btn" type="submit">Send</button>
+      <button class="btn" style="width:100%;">Submit Request</button>
     </form>
   </div>
 </div>
 
 <script>
-function openModal() {
-  document.getElementById("contactModal").style.display = "block";
-}
-function closeModal() {
-  document.getElementById("contactModal").style.display = "none";
-}
+function openModal(){document.getElementById('quoteModal').style.display='flex';}
+function closeModal(){document.getElementById('quoteModal').style.display='none';}
+window.onclick=function(e){if(e.target===document.getElementById('quoteModal')) closeModal();}
 </script>
 
 </body>
