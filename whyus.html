@@ -1,90 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Why Us - Hotel Excel Solutions</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Us | Hotel Excel Solutions</title>
+
+<style>
+:root {
+  --primary:#0f2b48;
+  --accent:#1bb59b;
+  --accent-hover:#15937d;
+  --light:#f4f7f9;
+  --text:#2c3e50;
+  --muted:#666;
+  --white:#fff;
+}
+
+/* GLOBAL */
+body {
+  margin:0;
+  font-family:Segoe UI, Tahoma, sans-serif;
+  background:var(--light);
+  color:var(--text);
+}
+
+/* HEADER */
+header {
+  background:var(--primary);
+  padding:1rem 5%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+header img {height:90px;}
+nav a {
+  color:var(--white);
+  margin:0 15px;
+  text-decoration:none;
+  font-size:.95rem;
+}
+nav a:hover {color:var(--accent);}
+.btn {
+  background:var(--accent);
+  color:var(--white);
+  padding:10px 20px;
+  border-radius:6px;
+  border:none;
+  cursor:pointer;
+  font-size:.9rem;
+  font-weight:600;
+}
+.btn:hover {background:var(--accent-hover);}
+
+/* HERO */
+.hero {
+  background:var(--white);
+  padding:3rem 5%;
+  text-align:center;
+}
+.hero h1 {
+  color:var(--primary);
+  font-size:2.3rem;
+  margin-bottom:.5rem;
+}
+.hero p {
+  color:var(--muted);
+  font-size:1rem;
+}
+
+/* CONTENT */
+.container {
+  max-width:1100px;
+  margin:auto;
+  padding:2rem 5%;
+}
+
+/* CORPORATE SECTIONS */
+.section {
+  background:var(--white);
+  padding:2rem;
+  border-radius:12px;
+  border:1px solid #e3e3e3;
+  margin-bottom:2rem;
+  box-shadow:0 2px 6px rgba(0,0,0,0.05);
+}
+.section h2 {
+  color:var(--primary);
+  font-size:1.4rem;
+  margin-bottom:1rem;
+  font-weight:600;
+}
+.section h3 {
+  color:var(--primary);
+  margin-top:1rem;
+  font-size:1.1rem;
+  font-weight:600;
+}
+.section p {
+  color:var(--muted);
+  font-size:.95rem;
+  line-height:1.5;
+}
+
+/* BANNER */
+.banner {
+  background:#1bb59b;
+  color:#ffffff;
+  padding:1.5rem;
+  border-radius:8px;
+  text-align:center;
+  margin-top:2rem;
+}
+.banner p {
+  color:#ffffff;
+  font-size:1rem;
+  line-height:1.6;
+  margin-bottom:1rem;
+}
+.banner .btn {
+  background:#ffffff;
+  color:#0f2b48;
+  font-weight:bold;
+}
+
+/* MODAL */
+.modal {
+  display:none;
+  position:fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background:rgba(0,0,0,.5);
+  justify-content:center;
+  align-items:center;
+}
+.modal-content {
+  background:#fff;
+  padding:2rem;
+  border-radius:8px;
+  width:90%;
+  max-width:450px;
+  position:relative;
+}
+.close {
+  position:absolute;
+  top:10px; right:15px;
+  font-size:1.5rem;
+  cursor:pointer;
+}
+input,textarea {
+  width:100%;
+  padding:10px;
+  margin-bottom:1rem;
+  border:1px solid #ccc;
+  border-radius:6px;
+  font-size:.9rem;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <img src="logo.png" style="height:90px;">
-
+  <img src="logo.png">
   <nav>
     <a href="index.html">Home</a>
     <a href="whyus.html">Why Us</a>
     <a href="#" onclick="openModal()">Contact</a>
   </nav>
-
   <button class="btn" onclick="openModal()">Request a Quote</button>
 </header>
 
 <section class="hero">
-  <h1>Why Choose Us?</h1>
-  <p>We specialize in Excel‑based hotel reporting solutions that save time, reduce errors, and improve clarity.</p>
+  <h1>Why Choose Hotel Excel Solutions?</h1>
+  <p>Precision. Experience. Automation. Everything your hotel accounting team needs to operate at peak efficiency.</p>
 </section>
 
-<section class="whyus">
-  <h2>Our Advantages</h2>
+<div class="container">
 
-  <div class="why-grid">
-    <div class="why-item">
-      <h3>Hotel‑Focused Expertise</h3>
-      <p>We understand ADR, RevPAR, occupancy, segmentation, forecasting, and owner reporting.</p>
-    </div>
+  <div class="section">
+    <h2>Industry Expertise You Can Trust</h2>
 
-    <div class="why-item">
-      <h3>Fast Turnaround</h3>
-      <p>Most dashboards and templates are delivered within 48–72 hours.</p>
-    </div>
+    <h3>Director‑Level Accounting Experience</h3>
+    <p>Every automation and workflow is built by a former Director of Finance with real hotel operational experience.</p>
 
-    <div class="why-item">
-      <h3>Automation First</h3>
-      <p>We eliminate repetitive tasks so your team can focus on operations, not spreadsheets.</p>
-    </div>
-
-    <div class="why-item">
-      <h3>Clean, Modern Design</h3>
-      <p>Your dashboards will be easy to read, easy to use, and easy to update.</p>
-    </div>
+    <h3>Purpose‑Built for Hotels</h3>
+    <p>Our solutions are designed specifically for hospitality accounting: PMS data, occupancy tax, credit card settlements, bank recs, income journals, and more.</p>
   </div>
-</section>
 
-<footer>
-  <p>© 2026 HotelExcelSolutions</p>
-</footer>
+  <div class="section">
+    <h2>Automation That Saves Hours Every Week</h2>
 
-<!-- CONTACT MODAL -->
-<div id="contactModal" class="modal">
+    <h3>Smart Excel + VBA Engineering</h3>
+    <p>We eliminate repetitive tasks, reduce human error, and streamline your month‑end close.</p>
+
+    <h3>Customized to Your Property</h3>
+    <p>Every solution is tailored to your PMS, chart of accounts, tax structure, and reporting needs.</p>
+  </div>
+
+  <div class="section">
+    <h2>Flexible Support Options</h2>
+
+    <h3>Remote Temporary Contract Labor</h3>
+    <p>Short‑term remote accounting coverage during turnover, leave, or peak periods.</p>
+
+    <h3>Remote Fractional Director of Finance</h3>
+    <p>Professional DOF oversight without the full‑time salary — ideal for independent hotels or properties in transition.</p>
+  </div>
+
+  <div class="section">
+    <h2>Reliable Support & Zero‑Risk Guarantee</h2>
+
+    <h3>Fast Turnaround</h3>
+    <p>Most projects are completed within one week — even complex builds.</p>
+
+    <h3>Affordable Updates</h3>
+    <p>Minor updates start at just $50.</p>
+
+    <h3>100% Satisfaction Guarantee</h3>
+    <p>If you're not satisfied with the delivered solution, your deposit is refunded.</p>
+  </div>
+
+  <div class="banner">
+    <p><strong>Ready to upgrade your hotel’s financial workflow?</strong></p>
+    <button class="btn" onclick="openModal()">Request a Quote</button>
+  </div>
+
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="quoteModal">
   <div class="modal-content">
     <span class="close" onclick="closeModal()">&times;</span>
-    <h2>Contact Us</h2>
+    <h2 style="color:var(--primary); margin-bottom:1rem;">Request a Quote</h2>
+
     <form action="https://api.web3forms.com/submit" method="POST">
-      <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
+      <input type="hidden" name="access_key" value="4892f52e-7f57-4a6a-965e-d0a2a66b66ae">
 
-      <label>Name</label>
-      <input type="text" name="name" required>
+      <input type="text" name="Name" placeholder="Your Name" required>
+      <input type="text" name="Property" placeholder="Hotel / Property Name" required>
+      <input type="email" name="Email" placeholder="Email Address" required>
+      <textarea name="Services" rows="3" placeholder="Tell us what you need..."></textarea>
 
-      <label>Email</label>
-      <input type="email" name="email" required>
-
-      <label>Message</label>
-      <textarea name="message" required></textarea>
-
-      <button class="btn" type="submit">Send</button>
+      <button class="btn" style="width:100%;">Submit Request</button>
     </form>
   </div>
 </div>
 
 <script>
-function openModal() {
-  document.getElementById("contactModal").style.display = "block";
-}
-function closeModal() {
-  document.getElementById("contactModal").style.display = "none";
-}
+function openModal(){document.getElementById('quoteModal').style.display='flex';}
+function closeModal(){document.getElementById('quoteModal').style.display='none';}
+window.onclick=function(e){if(e.target===document.getElementById('quoteModal')) closeModal();}
 </script>
 
 </body>
