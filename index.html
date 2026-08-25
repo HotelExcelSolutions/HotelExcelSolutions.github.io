@@ -14,6 +14,7 @@
   --text-dark: #2c3e50;
   --text-muted: #666666;
   --white: #ffffff;
+  --banner-bg: #e8f3f7; /* NEW readable banner color */
 }
 
 * {
@@ -264,10 +265,10 @@ nav a:hover {
   font-size: 0.75rem;
 }
 
-/* FOOTER */
+/* NEW READABLE BANNER */
 .guarantee-banner {
-  background: var(--primary);
-  color: var(--white);
+  background: var(--banner-bg);
+  color: var(--primary);
   padding: 1.5rem;
   border-radius: 8px;
   margin-top: 2rem;
@@ -278,9 +279,9 @@ nav a:hover {
   gap: 1rem;
 }
 
-.guarantee-text p {
-  font-size: 0.85rem;
-  opacity: 0.9;
+.guarantee-banner p {
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 /* MODAL */
@@ -379,179 +380,4 @@ nav a:hover {
 
         <div class="card">
           <div>
-            <div class="card-icon">🧾</div>
-            <h3>Monthly Tax Reconciliations</h3>
-            <p>Insightful, bulletproof tax reporting tailored for hotel audits.</p>
-          </div>
-          <div>
-            <span class="price">Starting at $1,000</span>
-            <button class="btn-card" onclick="openModal()">Automate Now</button>
-          </div>
-        </div>
-
-        <div class="card">
-          <div>
-            <div class="card-icon">📅</div>
-            <h3>Daily Tax Reconciliations</h3>
-            <p>Stay on top of daily room and occupancy tax collections effortlessly.</p>
-          </div>
-          <div>
-            <span class="price">Just $250 with Monthly Recs</span>
-            <button class="btn-card" onclick="openModal()">Automate Now</button>
-          </div>
-        </div>
-
-        <div class="card">
-          <div>
-            <div class="card-icon">📥</div>
-            <h3>Income Journal</h3>
-            <p>Automated data compilation from PMS directly into customized Excel formats.</p>
-          </div>
-          <div>
-            <span class="price">$500–$5,000 (Based on complexity)</span>
-            <button class="btn-card" onclick="openModal()">Automate Now</button>
-          </div>
-        </div>
-
-        <div class="card">
-          <div>
-            <div class="card-icon">💳</div>
-            <h3>Credit Card Reconciliation</h3>
-            <p>Transaction-level matching to catch merchant fee discrepancies fast.</p>
-          </div>
-          <div>
-            <span class="price">Custom Pricing</span>
-            <button class="btn-card" onclick="openModal()">Automate Now</button>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- ADVANTAGE -->
-    <div id="advantage">
-      <div class="advantage-box">
-        <h2>The HotelExcel Advantage</h2>
-
-        <div class="feature-item">
-          <span>⭐</span>
-          <div>
-            <strong>Experienced Professionals</strong>
-            <p>Director of Finance level expertise behind every template.</p>
-          </div>
-        </div>
-
-        <div class="feature-item">
-          <span>🔧</span>
-          <div>
-            <strong>Ongoing Support</strong>
-            <p>Minor updates available for $50+.</p>
-          </div>
-        </div>
-
-        <div class="feature-item">
-          <span>🛡️</span>
-          <div>
-            <strong>Zero Risk Guarantee</strong>
-            <p>100% satisfaction or your deposit back.</p>
-          </div>
-        </div>
-
-        <div class="feature-item">
-          <span>⚡</span>
-          <div>
-            <strong>Rapid Turnaround</strong>
-            <p>Most projects completed within a single week.</p>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="steps-box">
-        <h3>Getting Started</h3>
-        <div class="steps-list">
-          <div class="step">
-            <div class="step-num">1</div>
-            <p>Consultation</p>
-          </div>
-          <div class="step">
-            <div class="step-num">2</div>
-            <p>Development</p>
-          </div>
-          <div class="step">
-            <div class="step-num">3</div>
-            <p>Review & Handover</p>
-          </div>
-        </div>
-        <p style="font-size: 0.8rem; text-align: center; opacity: 0.9;">50% down payment to initiate project.</p>
-      </div>
-
-    </div>
-
-  </div>
-
-  <div class="guarantee-banner" id="contact">
-    <div class="guarantee-text">
-      <p><strong>Ready to simplify your hotel accounting?</strong> Reach out via email for a prompt response. All files are developed in native Excel utilizing formulas & VBA code tailored to your data.</p>
-    </div>
-    <button class="btn-quote" style="background: var(--white); color: var(--primary);" onclick="openModal()">Contact Us</button>
-  </div>
-
-</div>
-
-<!-- MODAL -->
-<div class="modal" id="quoteModal">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeModal()">&times;</span>
-    <h2 style="color: var(--primary); margin-bottom: 1rem;">Request a Quote</h2>
-
-    <!-- WORKING WEB3FORMS EMAIL FORM -->
-    <form action="https://api.web3forms.com/submit" method="POST">
-
-      <input type="hidden" name="access_key" value="4892f52e-7f57-4a6a-965e-d0a2a66b66ae">
-
-      <div class="form-group">
-        <label>Your Name</label>
-        <input type="text" name="Name" required placeholder="John Doe">
-      </div>
-
-      <div class="form-group">
-        <label>Hotel / Property Name</label>
-        <input type="text" name="Property" required placeholder="Grand Hotel">
-      </div>
-
-      <div class="form-group">
-        <label>Email Address</label>
-        <input type="email" name="Email" required placeholder="john@hotel.com">
-      </div>
-
-      <div class="form-group">
-        <label>Services Needed</label>
-        <textarea name="Services" rows="3" placeholder="Tell us which reconciliations or templates you need help with..."></textarea>
-      </div>
-
-      <button type="submit" class="btn-quote" style="width:100%;">Submit Request</button>
-    </form>
-
-  </div>
-</div>
-
-<script>
-function openModal() {
-  document.getElementById('quoteModal').style.display = 'flex';
-}
-
-function closeModal() {
-  document.getElementById('quoteModal').style.display = 'none';
-}
-
-window.onclick = function(event) {
-  const modal = document.getElementById('quoteModal');
-  if (event.target === modal) {
-    closeModal();
-  }
-}
-</script>
-
-</body>
-</html>
+            <div class="card-icon">
