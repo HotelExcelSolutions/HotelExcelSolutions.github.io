@@ -7,151 +7,38 @@
 
 <style>
 :root {
-  --primary: #0f2b48;
-  --accent: #1bb59b;
-  --accent-hover: #15937d;
-  --light-bg: #f4f7f9;
-  --text-dark: #2c3e50;
-  --text-muted: #666666;
-  --white: #ffffff;
+  --primary:#0f2b48; --accent:#1bb59b; --light:#f4f7f9;
+  --text:#2c3e50; --muted:#666; --white:#fff; --banner:#e8f3f7;
 }
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
-  background: var(--light-bg);
-  color: var(--text-dark);
-  line-height: 1.6;
-}
-
-/* HEADER */
-header {
-  background: var(--primary);
-  padding: 1rem 5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header img {
-  height: 100px;
-}
-
-nav a {
-  color: var(--white);
-  text-decoration: none;
-  margin: 0 15px;
-  font-size: 0.95rem;
-}
-
-nav a:hover {
-  color: var(--accent);
-}
-
-.btn-quote {
-  background: var(--accent);
-  color: var(--white);
-  padding: 8px 18px;
-  border-radius: 4px;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.btn-quote:hover {
-  background: var(--accent-hover);
-}
-
-/* HERO */
-.hero {
-  background: var(--white);
-  padding: 3rem 5%;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 2.4rem;
-  color: var(--primary);
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.1rem;
-  color: var(--text-muted);
-}
-
-/* CONTENT */
-.container {
-  max-width: 1100px;
-  margin: 2rem auto;
-  padding: 0 5%;
-}
-
-.section {
-  background: var(--white);
-  padding: 2rem;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-  border: 1px solid #e1e8ed;
-}
-
-.section h2 {
-  color: var(--primary);
-  margin-bottom: 1rem;
-}
-
-.feature {
-  margin-bottom: 1.5rem;
-}
-
-.feature h3 {
-  color: var(--primary);
-  margin-bottom: 0.5rem;
-}
-
-.feature p {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-}
-
-/* CTA */
-.cta {
-  background: var(--primary);
-  color: var(--white);
-  padding: 2rem;
-  text-align: center;
-  border-radius: 8px;
-  margin-top: 2rem;
-}
-
-.cta p {
-  margin-bottom: 1rem;
-  font-size: 1rem;
-}
-
-.cta .btn-quote {
-  background: var(--white);
-  color: var(--primary);
-}
-
+body {margin:0; font-family:Segoe UI,Tahoma; background:var(--light); color:var(--text);}
+header {background:var(--primary); padding:1rem 5%; display:flex; justify-content:space-between; align-items:center;}
+header img {height:90px;}
+nav a {color:var(--white); margin:0 15px; text-decoration:none;}
+nav a:hover {color:var(--accent);}
+.btn {background:var(--accent); color:var(--white); padding:8px 18px; border-radius:4px; border:none; cursor:pointer;}
+.btn:hover {background:#15937d;}
+.hero {background:var(--white); padding:3rem 5%; text-align:center;}
+.hero h1 {color:var(--primary); font-size:2.2rem;}
+.hero p {color:var(--muted);}
+.container {max-width:1100px; margin:auto; padding:2rem 5%;}
+.section {background:var(--white); padding:2rem; border-radius:8px; border:1px solid #ddd; margin-bottom:2rem;}
+.section h2 {color:var(--primary);}
+.section h3 {color:var(--primary); margin-top:1rem;}
+.section p {color:var(--muted); font-size:.95rem;}
+.banner {background:var(--banner); padding:1.5rem; border-radius:8px; text-align:center; margin-top:2rem;}
 </style>
 </head>
 
 <body>
 
 <header>
-  <img src="logo.png" alt="Hotel Excel Solutions">
+  <img src="logo.png">
   <nav>
     <a href="index.html">Home</a>
     <a href="whyus.html">Why Us</a>
     <a href="#" onclick="openModal()">Contact</a>
   </nav>
-  <button class="btn-quote" onclick="openModal()">Request a Quote</button>
+  <button class="btn" onclick="openModal()">Request a Quote</button>
 </header>
 
 <section class="hero">
@@ -163,104 +50,73 @@ nav a:hover {
 
   <div class="section">
     <h2>Industry Expertise You Can Trust</h2>
-    <div class="feature">
-      <h3>Director‑Level Accounting Experience</h3>
-      <p>Every template, automation, and workflow is built by a former Director of Finance with real hotel operational experience. You’re not getting generic spreadsheets — you’re getting tools built by someone who has lived your challenges.</p>
-    </div>
+    <h3>Director‑Level Accounting Experience</h3>
+    <p>Every automation and workflow is built by a former Director of Finance with real hotel operational experience.</p>
 
-    <div class="feature">
-      <h3>Purpose‑Built for Hotels</h3>
-      <p>Our solutions are designed specifically for hospitality accounting: PMS data, occupancy tax, credit card settlements, bank recs, income journals, and more.</p>
-    </div>
+    <h3>Purpose‑Built for Hotels</h3>
+    <p>Our solutions are designed specifically for hospitality accounting: PMS data, occupancy tax, credit card settlements, bank recs, income journals, and more.</p>
   </div>
 
   <div class="section">
     <h2>Automation That Saves Hours Every Week</h2>
-    <div class="feature">
-      <h3>Smart Excel + VBA Engineering</h3>
-      <p>We build tools that eliminate repetitive tasks, reduce human error, and streamline your month‑end close. Your team gets more time back — and fewer headaches.</p>
-    </div>
+    <h3>Smart Excel + VBA Engineering</h3>
+    <p>We eliminate repetitive tasks, reduce human error, and streamline your month‑end close.</p>
 
-    <div class="feature">
-      <h3>Customized to Your Property</h3>
-      <p>No two hotels operate the same. Every solution is tailored to your PMS, your chart of accounts, your tax structure, and your reporting needs.</p>
-    </div>
+    <h3>Customized to Your Property</h3>
+    <p>Every solution is tailored to your PMS, chart of accounts, tax structure, and reporting needs.</p>
+  </div>
+
+  <div class="section">
+    <h2>Flexible Support Options</h2>
+    <h3>Temporary Contract Labor</h3>
+    <p>Short‑term accounting coverage during turnover, leave, or peak periods.</p>
+
+    <h3>Fractional Director of Finance</h3>
+    <p>Professional DOF oversight without the full‑time salary — ideal for independent hotels or properties in transition.</p>
   </div>
 
   <div class="section">
     <h2>Reliable Support & Zero‑Risk Guarantee</h2>
-    <div class="feature">
-      <h3>Fast Turnaround</h3>
-      <p>Most projects are completed within one week — even complex builds.</p>
-    </div>
+    <h3>Fast Turnaround</h3>
+    <p>Most projects are completed within one week — even complex builds.</p>
 
-    <div class="feature">
-      <h3>Affordable Updates</h3>
-      <p>Need a tweak or enhancement later? Minor updates start at just $50.</p>
-    </div>
+    <h3>Affordable Updates</h3>
+    <p>Minor updates start at just $50.</p>
 
-    <div class="feature">
-      <h3>100% Satisfaction Guarantee</h3>
-      <p>If you're not satisfied with the delivered solution, your deposit is refunded. No risk, no hassle.</p>
-    </div>
+    <h3>100% Satisfaction Guarantee</h3>
+    <p>If you're not satisfied with the delivered solution, your deposit is refunded.</p>
   </div>
 
-  <div class="cta">
-    <p>Ready to upgrade your hotel’s financial workflow?</p>
-    <button class="btn-quote" onclick="openModal()">Request a Quote</button>
+  <div class="banner">
+    <p><strong>Ready to upgrade your hotel’s financial workflow?</strong></p>
+    <button class="btn" onclick="openModal()">Request a Quote</button>
   </div>
 
 </div>
 
-<!-- MODAL (same as your main site) -->
-<div class="modal" id="quoteModal" style="display:none;">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeModal()">&times;</span>
-    <h2 style="color: var(--primary); margin-bottom: 1rem;">Request a Quote</h2>
+<!-- MODAL -->
+<div class="modal" id="quoteModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,.5); justify-content:center; align-items:center;">
+  <div class="modal-content" style="background:#fff; padding:2rem; border-radius:8px; width:90%; max-width:450px; position:relative;">
+    <span class="close" onclick="closeModal()" style="position:absolute; top:10px; right:15px; font-size:1.5rem; cursor:pointer;">&times;</span>
+    <h2 style="color:var(--primary); margin-bottom:1rem;">Request a Quote</h2>
 
     <form action="https://api.web3forms.com/submit" method="POST">
       <input type="hidden" name="access_key" value="4892f52e-7f57-4a6a-965e-d0a2a66b66ae">
 
-      <div class="form-group">
-        <label>Your Name</label>
-        <input type="text" name="Name" required>
-      </div>
+      <input type="text" name="Name" placeholder="Your Name" required>
+      <input type="text" name="Property" placeholder="Hotel / Property Name" required>
+      <input type="email" name="Email" placeholder="Email Address" required>
+      <textarea name="Services" rows="3" placeholder="Tell us what you need..."></textarea>
 
-      <div class="form-group">
-        <label>Hotel / Property Name</label>
-        <input type="text" name="Property" required>
-      </div>
-
-      <div class="form-group">
-        <label>Email Address</label>
-        <input type="email" name="Email" required>
-      </div>
-
-      <div class="form-group">
-        <label>Services Needed</label>
-        <textarea name="Services" rows="3"></textarea>
-      </div>
-
-      <button type="submit" class="btn-quote" style="width:100%;">Submit Request</button>
+      <button class="btn" style="width:100%;">Submit Request</button>
     </form>
   </div>
 </div>
 
 <script>
-function openModal() {
-  document.getElementById('quoteModal').style.display = 'flex';
-}
-
-function closeModal() {
-  document.getElementById('quoteModal').style.display = 'none';
-}
-
-window.onclick = function(event) {
-  const modal = document.getElementById('quoteModal');
-  if (event.target === modal) {
-    closeModal();
-  }
-}
+function openModal(){document.getElementById('quoteModal').style.display='flex';}
+function closeModal(){document.getElementById('quoteModal').style.display='none';}
+window.onclick=function(e){if(e.target===document.getElementById('quoteModal')) closeModal();}
 </script>
 
 </body>
