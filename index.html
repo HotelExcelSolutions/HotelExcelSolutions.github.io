@@ -3,9 +3,151 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hotel Excel Solutions | Automated Hotel Accounting</title>
+<title>Hotel Excel Solutions</title>
 
 <style>
-[...full CSS...]
+:root {
+  --primary:#0f2b48; --accent:#1bb59b; --accent-hover:#15937d;
+  --light:#f4f7f9; --text:#2c3e50; --muted:#666; --white:#fff;
+  --banner:#e8f3f7;
+}
+body {margin:0; font-family:Segoe UI,Tahoma; background:var(--light); color:var(--text);}
+header {background:var(--primary); padding:1rem 5%; display:flex; justify-content:space-between; align-items:center;}
+header img {height:90px;}
+nav a {color:var(--white); margin:0 15px; text-decoration:none;}
+nav a:hover {color:var(--accent);}
+.btn {background:var(--accent); color:var(--white); padding:8px 18px; border-radius:4px; border:none; cursor:pointer;}
+.btn:hover {background:var(--accent-hover);}
+.hero {background:var(--white); padding:3rem 5%; display:flex; flex-wrap:wrap; gap:2rem;}
+.hero-text {flex:1; min-width:280px;}
+.hero-text h1 {font-size:2.2rem; color:var(--primary);}
+.hero-text p {color:var(--muted);}
+.hero img {max-width:480px; width:100%; border-radius:8px;}
+.container {padding:3rem 5%; max-width:1200px; margin:auto;}
+.grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1.5rem;}
+.card {background:var(--white); padding:1.5rem; border-radius:8px; border:1px solid #ddd; text-align:center;}
+.card h3 {color:var(--primary);}
+.card p {color:var(--muted); font-size:.9rem;}
+.price {font-weight:bold; margin:1rem 0; color:var(--primary);}
+.banner {background:var(--banner); padding:1.5rem; border-radius:8px; margin-top:2rem; display:flex; justify-content:space-between; flex-wrap:wrap;}
+.banner p {color:var(--primary); max-width:600px;}
+.modal {display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,.5); justify-content:center; align-items:center;}
+.modal-content {background:var(--white); padding:2rem; border-radius:8px; width:90%; max-width:450px; position:relative;}
+.close {position:absolute; top:10px; right:15px; font-size:1.5rem; cursor:pointer;}
+input,textarea {width:100%; padding:8px; margin-bottom:1rem; border:1px solid #ccc; border-radius:4px;}
 </style>
 </head>
+
+<body>
+
+<header>
+  <img src="logo.png">
+  <nav>
+    <a href="#services">Services</a>
+    <a href="whyus.html">Why Us</a>
+    <a href="#" onclick="openModal()">Contact</a>
+  </nav>
+  <button class="btn" onclick="openModal()">Request a Quote</button>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Streamline Your Hotel’s Financial Operations</h1>
+    <p>Automated Excel solutions built by hotel accounting experts.</p>
+    <button class="btn" onclick="openModal()">Get Started</button>
+  </div>
+  <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80">
+</section>
+
+<div class="container">
+
+<h2 id="services" style="color:var(--primary); margin-bottom:1rem;">Services</h2>
+
+<div class="grid">
+
+  <div class="card">
+    <h3>Bank Reconciliations</h3>
+    <p>Fast, automated matching for hotel bank activity.</p>
+    <div class="price">Starting at $1,000</div>
+    <button class="btn" onclick="openModal()">Automate</button>
+  </div>
+
+  <div class="card">
+    <h3>Monthly Tax Reconciliations</h3>
+    <p>Accurate occupancy & room tax reporting.</p>
+    <div class="price">Starting at $1,000</div>
+    <button class="btn" onclick="openModal()">Automate</button>
+  </div>
+
+  <div class="card">
+    <h3>Daily Tax Reconciliations</h3>
+    <p>Stay compliant with daily tax tracking.</p>
+    <div class="price">$250 with Monthly Recs</div>
+    <button class="btn" onclick="openModal()">Automate</button>
+  </div>
+
+  <div class="card">
+    <h3>Income Journal Automation</h3>
+    <p>PMS → Excel automation for daily revenue.</p>
+    <div class="price">$500–$5,000</div>
+    <button class="btn" onclick="openModal()">Automate</button>
+  </div>
+
+  <div class="card">
+    <h3>Credit Card Reconciliation</h3>
+    <p>Match deposits, fees, and PMS activity.</p>
+    <div class="price">Custom Pricing</div>
+    <button class="btn" onclick="openModal()">Automate</button>
+  </div>
+
+  <div class="card">
+    <h3>Temporary Contract Labor</h3>
+    <p>Short-term hotel accounting coverage during turnover or peak periods.</p>
+    <div class="price">Flexible Weekly Rates</div>
+    <button class="btn" onclick="openModal()">Request Staffing</button>
+  </div>
+
+  <div class="card">
+    <h3>Fractional Director of Finance</h3>
+    <p>Professional DOF oversight without full-time payroll.</p>
+    <div class="price">Monthly Retainer</div>
+    <button class="btn" onclick="openModal()">Learn More</button>
+  </div>
+
+</div>
+
+<div class="banner">
+  <p><strong>Ready to simplify your hotel accounting?</strong><br>
+  From automated Excel tools to fractional DOF support, we help hotels operate smarter.</p>
+  <button class="btn" onclick="openModal()">Contact Us</button>
+</div>
+
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="quoteModal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2 style="color:var(--primary); margin-bottom:1rem;">Request a Quote</h2>
+
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="4892f52e-7f57-4a6a-965e-d0a2a66b66ae">
+
+      <input type="text" name="Name" placeholder="Your Name" required>
+      <input type="text" name="Property" placeholder="Hotel / Property Name" required>
+      <input type="email" name="Email" placeholder="Email Address" required>
+      <textarea name="Services" rows="3" placeholder="Tell us what you need..."></textarea>
+
+      <button class="btn" style="width:100%;">Submit Request</button>
+    </form>
+  </div>
+</div>
+
+<script>
+function openModal(){document.getElementById('quoteModal').style.display='flex';}
+function closeModal(){document.getElementById('quoteModal').style.display='none';}
+window.onclick=function(e){if(e.target===document.getElementById('quoteModal')) closeModal();}
+</script>
+
+</body>
+</html>
