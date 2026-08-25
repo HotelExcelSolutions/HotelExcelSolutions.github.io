@@ -88,18 +88,24 @@ nav a:hover {color:var(--accent);}
 .grid {
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
-  gap:1.5rem; /* original spacing */
+  gap:1.5rem;
 }
 
-/* CARD — INTERNAL ALIGNMENT FIX ONLY */
+/* ICONS */
+.icon {
+  width:40px;
+  height:40px;
+  margin-bottom:1rem;
+  opacity:0.85;
+}
+
+/* CARD — INTERNAL ALIGNMENT FIX */
 .card {
   background:var(--white);
   padding:1.5rem;
   border-radius:8px;
   border:1px solid #ddd;
   text-align:center;
-
-  /* NEW: internal alignment without changing card height */
   display:flex;
   flex-direction:column;
 }
@@ -113,8 +119,6 @@ nav a:hover {color:var(--accent);}
   color:var(--muted);
   font-size:.9rem;
   line-height:1.4;
-
-  /* NEW: expands description area to align buttons */
   flex-grow:1;
 }
 
@@ -216,6 +220,7 @@ input,textarea {
 <div class="grid">
 
   <div class="card">
+    <img class="icon" src="https://cdn.jsdelivr.net/npm/lucide-static/icons/bank.svg">
     <h3>Bank Reconciliations</h3>
     <p>Fast, automated matching for hotel bank activity.</p>
     <div class="price">Starting at $1,000</div>
@@ -223,6 +228,7 @@ input,textarea {
   </div>
 
   <div class="card">
+    <img class="icon" src="https://cdn.jsdelivr.net/npm/lucide-static/icons/file-text.svg">
     <h3>Monthly Tax Reconciliations</h3>
     <p>Accurate occupancy & room tax reporting.</p>
     <div class="price">Starting at $1,000</div>
@@ -230,6 +236,7 @@ input,textarea {
   </div>
 
   <div class="card">
+    <img class="icon" src="https://cdn.jsdelivr.net/npm/lucide-static/icons/calendar.svg">
     <h3>Daily Tax Reconciliations</h3>
     <p>Stay compliant with daily tax tracking.</p>
     <div class="price">$250 with Monthly Recs</div>
@@ -237,6 +244,7 @@ input,textarea {
   </div>
 
   <div class="card">
+    <img class="icon" src="https://cdn.jsdelivr.net/npm/lucide-static/icons/chart-bar.svg">
     <h3>Income Journal Automation</h3>
     <p>PMS → Excel automation for daily revenue.</p>
     <div class="price">$500–$5,000</div>
@@ -244,6 +252,7 @@ input,textarea {
   </div>
 
   <div class="card">
+    <img class="icon" src="https://cdn.jsdelivr.net/npm/lucide-static/icons/credit-card.svg">
     <h3>Credit Card Reconciliation</h3>
     <p>Match deposits, fees, and PMS activity.</p>
     <div class="price">Custom Pricing</div>
@@ -251,6 +260,7 @@ input,textarea {
   </div>
 
   <div class="card">
+    <img class="icon" src="https://cdn.jsdelivr.net/npm/lucide-static/icons/users.svg">
     <h3>Temporary Contract Labor</h3>
     <p>Remote hotel accounting coverage during turnover, leave, or peak periods.</p>
     <div class="price">Flexible Weekly Rates</div>
@@ -258,6 +268,7 @@ input,textarea {
   </div>
 
   <div class="card">
+    <img class="icon" src="https://cdn.jsdelivr.net/npm/lucide-static/icons/briefcase.svg">
     <h3>Fractional Director of Finance</h3>
     <p>Remote fractional DOF oversight without full‑time payroll.</p>
     <div class="price">Monthly Retainer</div>
