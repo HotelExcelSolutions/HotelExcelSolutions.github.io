@@ -26,13 +26,29 @@ body {
 
 /* HEADER */
 header {
-  background:#17375e; /* lighter corporate navy */
+  background:var(--primary);
   padding:1rem 5%;
   display:flex;
   justify-content:space-between;
   align-items:center;
 }
+
+/* BRAND TEXT FIX (#3) */
+.brand-title {
+  color:#ffffff;
+  font-size:1.4rem;
+  font-weight:700;
+  text-shadow:0 0 6px rgba(0,0,0,0.6);
+}
+
+.brand-tagline {
+  color:#e8f3f7;
+  font-size:.85rem;
+  text-shadow:0 0 6px rgba(0,0,0,0.6);
+}
+
 header img {height:90px;}
+
 nav a {
   color:var(--white);
   margin:0 15px;
@@ -195,12 +211,20 @@ input,textarea {
 <body>
 
 <header>
-  <img src="logo.png">
+  <div style="display:flex; align-items:center; gap:15px;">
+    <img src="logo.png">
+    <div>
+      <div class="brand-title">HotelExcelSolutions</div>
+      <div class="brand-tagline">giving you an easy button</div>
+    </div>
+  </div>
+
   <nav>
-    <a href="#services">Services</a>
+    <a href="#services">Home</a>
     <a href="whyus.html">Why Us</a>
     <a href="#" onclick="openModal()">Contact</a>
   </nav>
+
   <button class="btn" onclick="openModal()">Request a Quote</button>
 </header>
 
