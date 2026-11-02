@@ -1,256 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Why Us | Hotel Excel Solutions</title>
-
-<style>
-:root {
-  --primary:#0f2b48;
-  --accent:#1bb59b;
-  --accent-hover:#15937d;
-  --light:#f4f7f9;
-  --text:#2c3e50;
-  --muted:#666;
-  --white:#fff;
-}
-
-/* GLOBAL */
-body {
-  margin:0;
-  font-family:Segoe UI, Tahoma, sans-serif;
-  background:var(--light);
-  color:var(--text);
-}
-
-/* HEADER */
-header {
-  background:var(--primary);
-  padding:1rem 5%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-header img {height:90px;}
-nav a {
-  color:var(--white);
-  margin:0 15px;
-  text-decoration:none;
-  font-size:.95rem;
-}
-nav a:hover {color:var(--accent);}
-.btn {
-  background:var(--accent);
-  color:var(--white);
-  padding:10px 20px;
-  border-radius:6px;
-  border:none;
-  cursor:pointer;
-  font-size:.9rem;
-  font-weight:600;
-}
-.btn:hover {background:var(--accent-hover);}
-
-/* HERO */
-.hero {
-  background:var(--white);
-  padding:3rem 5%;
-  text-align:center;
-}
-.hero h1 {
-  color:var(--primary);
-  font-size:2.3rem;
-  margin-bottom:.5rem;
-}
-.hero p {
-  color:var(--muted);
-  font-size:1rem;
-}
-
-/* CONTENT */
-.container {
-  max-width:1100px;
-  margin:auto;
-  padding:2rem 5%;
-}
-
-/* CORPORATE SECTIONS */
-.section {
-  background:var(--white);
-  padding:2rem;
-  border-radius:12px;
-  border:1px solid #e3e3e3;
-  margin-bottom:2rem;
-  box-shadow:0 2px 6px rgba(0,0,0,0.05);
-}
-.section h2 {
-  color:var(--primary);
-  font-size:1.4rem;
-  margin-bottom:1rem;
-  font-weight:600;
-}
-.section h3 {
-  color:var(--primary);
-  margin-top:1rem;
-  font-size:1.1rem;
-  font-weight:600;
-}
-.section p {
-  color:var(--muted);
-  font-size:.95rem;
-  line-height:1.5;
-}
-
-/* BANNER */
-.banner {
-  background:#1bb59b;
-  color:#ffffff;
-  padding:1.5rem;
-  border-radius:8px;
-  text-align:center;
-  margin-top:2rem;
-}
-.banner p {
-  color:#ffffff;
-  font-size:1rem;
-  line-height:1.6;
-  margin-bottom:1rem;
-}
-.banner .btn {
-  background:#ffffff;
-  color:#0f2b48;
-  font-weight:bold;
-}
-
-/* MODAL */
-.modal {
-  display:none;
-  position:fixed;
-  top:0; left:0;
-  width:100%; height:100%;
-  background:rgba(0,0,0,.5);
-  justify-content:center;
-  align-items:center;
-}
-.modal-content {
-  background:#fff;
-  padding:2rem;
-  border-radius:8px;
-  width:90%;
-  max-width:450px;
-  position:relative;
-}
-.close {
-  position:absolute;
-  top:10px; right:15px;
-  font-size:1.5rem;
-  cursor:pointer;
-}
-input,textarea {
-  width:100%;
-  padding:10px;
-  margin-bottom:1rem;
-  border:1px solid #ccc;
-  border-radius:6px;
-  font-size:.9rem;
-}
-</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why Choose Hotel Excel Solutions | Hotel Accounting Automation</title>
+<meta name="description" content="Director-level hotel accounting experience, Excel and VBA automation for your property, flexible remote support, fast turnaround, and a satisfaction guarantee.">
+<link rel="canonical" href="https://hotelexcelsolutions.com/whyus.html">
+<meta name="theme-color" content="#0f2b48">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src https://api.web3forms.com; form-action https://api.web3forms.com; base-uri 'none'; object-src 'none'">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Hotel Excel Solutions">
+<meta property="og:title" content="Why Choose Hotel Excel Solutions | Hotel Accounting Automation">
+<meta property="og:description" content="Director-level hotel accounting experience, Excel and VBA automation for your property, flexible remote support, fast turnaround, and a satisfaction guarantee.">
+<meta property="og:url" content="https://hotelexcelsolutions.com/whyus.html">
+<meta property="og:image" content="https://hotelexcelsolutions.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Hotel Excel Solutions: hotel accounting automation">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Why Choose Hotel Excel Solutions | Hotel Accounting Automation">
+<meta name="twitter:description" content="Director-level hotel accounting experience, Excel and VBA automation for your property, flexible remote support, fast turnaround, and a satisfaction guarantee.">
+<meta name="twitter:image" content="https://hotelexcelsolutions.com/og-image.png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-
-<header>
-  <img src="logo.png">
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="whyus.html">Why Us</a>
-    <a href="#" onclick="openModal()">Contact</a>
-  </nav>
-  <button class="btn" onclick="openModal()">Request a Quote</button>
+<svg class="hide" aria-hidden="true" focusable="false"><defs><symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol><symbol id="i-bank" viewBox="0 0 24 24"><path d="M3 10l9-6 9 6"/><path d="M5.5 10v8M9.8 10v8M14.2 10v8M18.5 10v8M3 20.5h18"/></symbol><symbol id="i-receipt" viewBox="0 0 24 24"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9.5 8h5M9.5 12h5"/></symbol><symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/><path d="M9 15l2 2 4-4"/></symbol><symbol id="i-table" viewBox="0 0 24 24"><rect x="3.5" y="4" width="17" height="16" rx="2.5"/><path d="M3.5 9.5h17M3.5 14.5h17M10 9.5V20"/></symbol><symbol id="i-card" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19M6 15h4"/></symbol><symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8.5" r="3.2"/><path d="M3 19.5c.6-3.3 3-5 6-5s5.4 1.7 6 5"/><circle cx="17.2" cy="9.5" r="2.5"/><path d="M17 14.6c2.4.2 3.9 1.7 4.4 4.4"/></symbol><symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7.5" width="18" height="12.5" rx="2.5"/><path d="M9 7.5V6a2 2 0 012-2h2a2 2 0 012 2v1.5M3 13h18"/></symbol><symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7.5 3v5.5c0 4.6-3.1 8-7.5 9.5-4.4-1.5-7.5-4.9-7.5-9.5V6z"/><path d="M9 12l2.2 2.2L15.5 10"/></symbol><symbol id="i-lock" viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V8a4 4 0 018 0v2.5"/></symbol><symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol><symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7.5 10.5L12 15l4.5-4.5M5 19.5h14"/></symbol><symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol><symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol><symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 3L5 13.5h6L10 21l8-10.5h-6z"/></symbol><symbol id="i-bars" viewBox="0 0 24 24"><path d="M4 20h16"/><path d="M7 20v-6M12 20V6M17 20v-9"/></symbol><symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 00-14-4.5L4 9M4 4v5h5M4 13a8 8 0 0014 4.5L20 15M20 20v-5h-5"/></symbol><symbol id="i-building" viewBox="0 0 24 24"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M9 8h2M13 8h2M9 12h2M13 12h2M10 20.5v-4h4v4"/></symbol><symbol id="i-file" viewBox="0 0 24 24"><path d="M7 3.5h7l4 4V20a1 1 0 01-1 1H7a1 1 0 01-1-1V4.5a1 1 0 011-1z"/><path d="M14 3.5V8h4M9 13h6M9 16.5h6"/></symbol></defs></svg>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Hotel Excel Solutions home"><img src="logo.png" alt="Hotel Excel Solutions: giving you an easy button" width="208" height="50"></a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#platform">Income Journal platform</a>
+      <a href="whyus.html" aria-current="page">Why Us</a>
+      <a href="#" data-open-quote>Contact</a>
+      <a class="nav-login" href="https://app.hotelexcelsolutions.com" rel="noopener">Client Login</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-outline btn-sm" href="https://app.hotelexcelsolutions.com" rel="noopener"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-lock"/></svg> Client Login</a>
+      <button type="button" class="btn btn-primary btn-sm" data-open-quote>Request a Quote</button>
+    </div>
+    <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav" aria-label="Menu"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg></button>
+  </div>
 </header>
 
-<section class="hero">
-  <h1>Why Choose Hotel Excel Solutions?</h1>
-  <p>Precision. Experience. Automation. Everything your hotel accounting team needs to operate at peak efficiency.</p>
+<main id="main">
+
+<section class="hero hero-page">
+  <svg class="skyline" viewBox="0 0 1440 150" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false"><rect x="-10" y="93" width="62" height="57" fill="#fff" fill-opacity=".07"/><rect x="-3" y="117" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="33" y="117" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="-3" y="131" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="60" y="82" width="62" height="68" fill="#fff" fill-opacity=".07"/><rect x="67" y="106" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="79" y="106" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="67" y="120" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="103" y="134" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="125" y="109" width="79" height="41" fill="#fff" fill-opacity=".07"/><rect x="132" y="119" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="156" y="119" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="180" y="119" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="192" y="119" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="144" y="133" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="168" y="133" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="192" y="133" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="209" y="69" width="83" height="81" fill="#fff" fill-opacity=".07"/><rect x="216" y="79" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="228" y="79" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="264" y="79" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="216" y="93" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="240" y="93" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="252" y="93" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="264" y="93" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="216" y="107" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="228" y="107" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="252" y="107" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="264" y="107" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="276" y="107" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="252" y="121" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="264" y="121" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="276" y="121" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="216" y="135" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="228" y="135" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="240" y="135" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="264" y="135" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="276" y="135" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="249" y="51" width="2" height="18" fill="#fff" fill-opacity=".12"/><rect x="301" y="72" width="87" height="78" fill="#fff" fill-opacity=".07"/><rect x="308" y="82" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="320" y="82" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="332" y="82" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="356" y="82" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="368" y="82" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="320" y="96" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="368" y="96" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="320" y="110" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="344" y="110" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="332" y="124" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="308" y="138" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="332" y="138" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="356" y="138" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="368" y="138" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="392" y="87" width="39" height="63" fill="#fff" fill-opacity=".07"/><rect x="399" y="97" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="411" y="125" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="437" y="121" width="36" height="29" fill="#fff" fill-opacity=".07"/><rect x="456" y="131" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="480" y="114" width="42" height="36" fill="#fff" fill-opacity=".07"/><rect x="487" y="124" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="499" y="124" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="529" y="44" width="39" height="106" fill="#fff" fill-opacity=".07"/><rect x="548" y="54" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="548" y="68" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="536" y="96" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="548" y="96" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="536" y="110" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="548" y="110" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="536" y="138" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="577" y="57" width="87" height="93" fill="#fff" fill-opacity=".07"/><rect x="584" y="67" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="596" y="67" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="608" y="67" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="620" y="67" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="632" y="67" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="608" y="81" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="632" y="81" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="584" y="95" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="608" y="95" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="632" y="95" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="596" y="109" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="608" y="109" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="632" y="109" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="632" y="123" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="644" y="123" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="584" y="137" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="608" y="137" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="632" y="137" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="619" y="39" width="2" height="18" fill="#fff" fill-opacity=".12"/><rect x="666" y="43" width="51" height="107" fill="#fff" fill-opacity=".07"/><rect x="673" y="53" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="685" y="53" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="697" y="53" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="673" y="67" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="685" y="67" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="697" y="67" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="673" y="81" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="673" y="95" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="673" y="123" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="685" y="123" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="697" y="123" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="685" y="137" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="697" y="137" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="727" y="38" width="66" height="112" fill="#fff" fill-opacity=".07"/><rect x="746" y="48" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="770" y="48" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="782" y="48" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="770" y="62" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="758" y="76" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="782" y="76" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="770" y="90" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="782" y="104" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="746" y="118" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="758" y="118" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="746" y="132" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="770" y="132" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="782" y="132" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="803" y="18" width="91" height="132" fill="#fff" fill-opacity=".07"/><rect x="858" y="42" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="810" y="56" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="858" y="56" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="822" y="70" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="834" y="70" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="858" y="70" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="882" y="70" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="810" y="84" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="834" y="84" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="882" y="84" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="822" y="98" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="882" y="98" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="834" y="112" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="846" y="112" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="858" y="112" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="870" y="112" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="882" y="112" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="822" y="140" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="834" y="140" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="847" y="0" width="2" height="18" fill="#fff" fill-opacity=".12"/><rect x="899" y="36" width="88" height="114" fill="#fff" fill-opacity=".07"/><rect x="930" y="46" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="954" y="46" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="966" y="46" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="906" y="60" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="930" y="60" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="942" y="60" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="954" y="60" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="930" y="74" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="954" y="74" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="978" y="74" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="906" y="88" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="930" y="88" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="978" y="88" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="942" y="102" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="954" y="102" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="906" y="116" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="918" y="116" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="954" y="116" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="978" y="116" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="918" y="130" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="930" y="130" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="942" y="130" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="954" y="130" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="966" y="130" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="942" y="18" width="2" height="18" fill="#fff" fill-opacity=".12"/><rect x="989" y="99" width="54" height="51" fill="#fff" fill-opacity=".07"/><rect x="996" y="123" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="1008" y="123" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="996" y="137" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="1050" y="27" width="90" height="123" fill="#fff" fill-opacity=".07"/><rect x="1093" y="37" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="1105" y="37" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="1117" y="37" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="1129" y="37" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="1081" y="51" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="1117" y="51" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="1129" y="51" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="1069" y="65" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="1129" y="65" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="1057" y="79" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="1069" y="79" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="1117" y="79" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="1129" y="79" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="1057" y="107" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="1093" y="107" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="1105" y="107" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="1093" y="121" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="1117" y="121" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="1057" y="135" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="1093" y="135" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="1129" y="135" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="1147" y="44" width="81" height="106" fill="#fff" fill-opacity=".07"/><rect x="1154" y="54" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="1178" y="54" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="1154" y="68" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="1166" y="68" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="1190" y="68" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="1214" y="68" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="1154" y="82" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="1166" y="82" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="1178" y="82" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="1190" y="82" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="1202" y="82" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="1154" y="96" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="1178" y="96" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="1166" y="110" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="1190" y="110" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="1214" y="110" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="1190" y="124" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="1214" y="124" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="1178" y="138" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="1190" y="138" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="1202" y="138" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="1231" y="15" width="48" height="135" fill="#fff" fill-opacity=".07"/><rect x="1238" y="25" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="1262" y="25" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="1250" y="39" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="1262" y="39" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="1238" y="53" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="1250" y="53" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="1238" y="95" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="1250" y="95" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="1250" y="109" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="1238" y="123" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="1250" y="123" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="1238" y="137" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="1250" y="137" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="1288" y="103" width="53" height="47" fill="#fff" fill-opacity=".07"/><rect x="1295" y="113" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="1319" y="127" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="1331" y="127" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="1307" y="141" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="1319" y="141" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="1347" y="10" width="62" height="140" fill="#fff" fill-opacity=".07"/><rect x="1366" y="20" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="1378" y="20" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="1354" y="34" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="1378" y="34" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="1390" y="34" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="1378" y="48" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="1378" y="62" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="1354" y="76" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="1366" y="76" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="1390" y="90" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="1354" y="104" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="1366" y="104" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="1378" y="104" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="1354" y="118" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="1378" y="118" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="1390" y="132" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="1416" y="41" width="85" height="109" fill="#fff" fill-opacity=".07"/><rect x="1423" y="65" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="1435" y="65" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="1423" y="93" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="1435" y="93" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.65"/><rect x="1447" y="93" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="1459" y="93" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="1483" y="93" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="1447" y="107" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="1471" y="107" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="1423" y="121" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="1447" y="121" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="1459" y="121" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/><rect x="1471" y="121" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.35"/><rect x="1471" y="135" width="4" height="6" rx="1" fill="#7fe3cf" fill-opacity="0.5"/></svg>
+  <div class="wrap">
+    <div>
+      <span class="eyebrow"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-building"/></svg> Why Hotel Excel Solutions</span>
+      <h1>Precision. Experience. Automation.</h1>
+      <p class="lead">Everything your hotel accounting team needs to operate at peak efficiency.</p>
+      <div class="hero-actions">
+        <button type="button" class="btn btn-primary" data-open-quote>Request a Quote <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></button>
+        <a class="btn btn-light" href="index.html#services">See our services</a>
+      </div>
+    </div>
+  </div>
 </section>
 
-<div class="container">
-
-  <div class="section">
-    <h2>Industry Expertise You Can Trust</h2>
-
-    <h3>Director‑Level Accounting Experience</h3>
-    <p>Every automation and workflow is built by a former Director of Finance with real hotel operational experience.</p>
-
-    <h3>Purpose‑Built for Hotels</h3>
-    <p>Our solutions are designed specifically for hospitality accounting: PMS data, occupancy tax, credit card settlements, bank recs, income journals, and more.</p>
-  </div>
-
-  <div class="section">
-    <h2>Automation That Saves Hours Every Week</h2>
-
-    <h3>Smart Excel + VBA Engineering</h3>
-    <p>We eliminate repetitive tasks, reduce human error, and streamline your month‑end close.</p>
-
-    <h3>Customized to Your Property</h3>
-    <p>Every solution is tailored to your PMS, chart of accounts, tax structure, and reporting needs.</p>
-  </div>
-
-  <div class="section">
-    <h2>Flexible Support Options</h2>
-
-    <h3>Remote Temporary Contract Labor</h3>
-    <p>Short‑term remote accounting coverage during turnover, leave, or peak periods.</p>
-
-    <h3>Remote Fractional Director of Finance</h3>
-    <p>Professional DOF oversight without the full‑time salary — ideal for independent hotels or properties in transition.</p>
-  </div>
-
-  <div class="section">
-    <h2>Reliable Support & Zero‑Risk Guarantee</h2>
-
-    <h3>Fast Turnaround</h3>
-    <p>Most projects are completed within one week — even complex builds.</p>
-
-    <h3>Affordable Updates</h3>
-    <p>Minor updates start at just $50.</p>
-
-    <h3>100% Satisfaction Guarantee</h3>
-    <p>If you're not satisfied with the delivered solution, your deposit is refunded.</p>
-  </div>
-
-  <div class="banner">
-    <p><strong>Ready to upgrade your hotel’s financial workflow?</strong></p>
-    <button class="btn" onclick="openModal()">Request a Quote</button>
-  </div>
-
-</div>
-
-<!-- MODAL -->
-<div class="modal" id="quoteModal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <h2 style="color:var(--primary); margin-bottom:1rem;">Request a Quote</h2>
-
-    <form action="https://api.web3forms.com/submit" method="POST">
-      <input type="hidden" name="access_key" value="4892f52e-7f57-4a6a-965e-d0a2a66b66ae">
-
-      <input type="text" name="Name" placeholder="Your Name" required>
-      <input type="text" name="Property" placeholder="Hotel / Property Name" required>
-      <input type="email" name="Email" placeholder="Email Address" required>
-      <textarea name="Services" rows="3" placeholder="Tell us what you need..."></textarea>
-
-      <button class="btn" style="width:100%;">Submit Request</button>
-    </form>
+<div class="wrap stats-wrap">
+  <div class="stats" role="list" aria-label="At a glance">
+    <div class="stat" role="listitem"><strong>1 week</strong><span>Most projects completed, even complex builds</span></div>
+    <div class="stat" role="listitem"><strong>$50</strong><span>Minor updates start at</span></div>
+    <div class="stat" role="listitem"><strong>100%</strong><span>Satisfaction guarantee, deposit refunded</span></div>
+    <div class="stat" role="listitem"><strong>Remote</strong><span>Contract labor and fractional DOF</span></div>
   </div>
 </div>
 
-<script>
-function openModal(){document.getElementById('quoteModal').style.display='flex';}
-function closeModal(){document.getElementById('quoteModal').style.display='none';}
-window.onclick=function(e){if(e.target===document.getElementById('quoteModal')) closeModal();}
-</script>
+<section class="section">
+  <div class="wrap">
+    <div class="rows">
+<div class="row" role="group" aria-labelledby="r1"><div class="visual" aria-hidden="true"><div class="visual-big"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-briefcase"/></svg></div><span class="chip c1"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg> Former Director of Finance</span><span class="chip c2"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg> Real hotel operations experience</span><span class="chip c3"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg> Built for hospitality accounting</span></div><div><span class="eyebrow">Experience</span><h2 id="r1">Industry expertise you can trust</h2><div class="point"><div class="icon-box"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-briefcase"/></svg></div><div><h3>Director-level accounting experience</h3><p>Every automation and workflow is built by a former Director of Finance with real hotel operational experience.</p></div></div><div class="point"><div class="icon-box"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-building"/></svg></div><div><h3>Purpose-built for hotels</h3><p>Our solutions are designed specifically for hospitality accounting: PMS data, occupancy tax, credit card settlements, bank recs, income journals, and more.</p></div></div></div></div>
+<div class="row flip" role="group" aria-labelledby="r2"><div class="visual" aria-hidden="true"><div class="visual-big"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-bolt"/></svg></div><span class="chip c1"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg> Fewer repetitive tasks</span><span class="chip c2"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg> Less human error</span><span class="chip c3"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg> A smoother month-end close</span></div><div><span class="eyebrow">Automation</span><h2 id="r2">Automation that saves hours every week</h2><div class="point"><div class="icon-box"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-bolt"/></svg></div><div><h3>Smart Excel + VBA engineering</h3><p>We eliminate repetitive tasks, reduce human error, and streamline your month-end close.</p></div></div><div class="point"><div class="icon-box"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-table"/></svg></div><div><h3>Customized to your property</h3><p>Every solution is tailored to your PMS, chart of accounts, tax structure, and reporting needs.</p></div></div></div></div>
+<div class="row" role="group" aria-labelledby="r3"><div class="visual" aria-hidden="true"><div class="visual-big"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-users"/></svg></div><span class="chip c1"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg> Turnover coverage</span><span class="chip c2"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg> Leave and peak periods</span><span class="chip c3"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg> No full-time payroll</span></div><div><span class="eyebrow">Flexibility</span><h2 id="r3">Flexible support options</h2><div class="point"><div class="icon-box"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-users"/></svg></div><div><h3>Remote temporary contract labor</h3><p>Short-term remote accounting coverage during turnover, leave, or peak periods.</p></div></div><div class="point"><div class="icon-box"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-briefcase"/></svg></div><div><h3>Remote fractional Director of Finance</h3><p>Professional DOF oversight without the full-time salary, ideal for independent hotels or properties in transition.</p></div></div></div></div>
+<div class="row flip" role="group" aria-labelledby="r4"><div class="visual" aria-hidden="true"><div class="visual-big"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-shield"/></svg></div><span class="chip c1"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg> Most projects in a week</span><span class="chip c2"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg> Updates from $50</span><span class="chip c3"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg> Deposit-back guarantee</span></div><div><span class="eyebrow">Reliability</span><h2 id="r4">Reliable support and a zero-risk guarantee</h2><div class="point"><div class="icon-box"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-clock"/></svg></div><div><h3>Fast turnaround</h3><p>Most projects are completed within one week, even complex builds.</p></div></div><div class="point"><div class="icon-box"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-refresh"/></svg></div><div><h3>Affordable updates</h3><p>Minor updates start at just $50.</p></div></div><div class="point"><div class="icon-box"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-shield"/></svg></div><div><h3>100% satisfaction guarantee</h3><p>If you are not satisfied with the delivered solution, your deposit is refunded.</p></div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" aria-labelledby="who-h">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Who we help</span>
+      <h2 id="who-h">Built for hotels that need more done with less</h2>
+    </div>
+    <div class="grid grid-3">
+      <article class="card"><div class="icon-box"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-building"/></svg></div><h3>Independent hotels</h3><p>Get director-level oversight and automation without the full-time salary.</p></article>
+      <article class="card"><div class="icon-box"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-refresh"/></svg></div><h3>Properties in transition</h3><p>Keep your accounting steady and on schedule while your property is in transition.</p></article>
+      <article class="card"><div class="icon-box"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-users"/></svg></div><h3>Teams short on time or people</h3><p>Remote coverage during turnover, leave, or peak periods.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band" aria-labelledby="cta-h">
+  <div class="wrap">
+    <h2 id="cta-h">Ready to upgrade your hotel&rsquo;s financial workflow?</h2>
+    
+    <div class="hero-actions">
+      <button type="button" class="btn btn-primary" data-open-quote>Request a Quote <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></button>
+      <a class="btn btn-light" href="https://app.hotelexcelsolutions.com" rel="noopener">Client Login</a>
+    </div>
+  </div>
+</section>
+
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <div class="wordmark"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-bars"/></svg> Hotel Excel Solutions</div>
+      <p>Hotel accounting automation, remote contract labor, and fractional Director of Finance support.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#platform">Income Journal platform</a></li>
+        <li><a href="whyus.html">Why Us</a></li>
+        <li><a href="index.html#faq">Questions</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Get started</h4>
+      <ul>
+        <li><a href="#" data-open-quote>Request a quote</a></li>
+        <li><a href="https://app.hotelexcelsolutions.com" rel="noopener">Client login</a></li>
+      </ul>
+    </div>
+    <small>&copy; 2026 Hotel Excel Solutions LLC. All rights reserved.</small>
+  </div>
+</footer>
+<div class="mobile-cta"><button type="button" class="btn btn-primary btn-block" data-open-quote>Request a Quote</button></div>
+
+<dialog class="quote" id="quote" aria-labelledby="quoteTitle">
+  <div class="quote-head">
+    <div>
+      <h2 id="quoteTitle">Request a quote</h2>
+      <p>Tell us a little about your property and what your team does by hand today.</p>
+    </div>
+    <button type="button" class="x" data-close-quote aria-label="Close"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-close"/></svg></button>
+  </div>
+  <form id="quoteForm" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="4892f52e-7f57-4a6a-965e-d0a2a66b66ae">
+    <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <div class="two">
+      <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+      <div class="field"><label for="f-property">Hotel or company</label><input id="f-property" name="property" type="text" autocomplete="organization" required></div>
+    </div>
+    <div class="two">
+      <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="f-phone">Phone <small>(optional)</small></label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+    </div>
+    <div class="field"><label for="f-interest">What are you interested in?</label><select id="f-interest" name="interest"><option value="">Choose one (optional)</option><option value="Income Journal Automation">Income Journal Automation</option><option value="Income Journal web platform (demo)">Income Journal web platform (demo)</option><option value="Bank Reconciliations">Bank Reconciliations</option><option value="Credit Card Reconciliation">Credit Card Reconciliation</option><option value="Monthly Tax Reconciliations">Monthly Tax Reconciliations</option><option value="Daily Tax Reconciliations">Daily Tax Reconciliations</option><option value="Temporary Contract Labor">Temporary Contract Labor</option><option value="Fractional Director of Finance">Fractional Director of Finance</option><option value="Something else">Something else</option></select></div>
+    <div class="field"><label for="f-message">Anything else we should know? <small>(optional)</small></label><textarea id="f-message" name="message" placeholder="Your PMS, what takes the most time, when you need it by&hellip;"></textarea></div>
+    <p class="form-msg bad" id="formMsg" role="alert" hidden></p>
+    <button type="submit" class="btn btn-primary btn-block">Send my request</button>
+    <p class="fine">We will only use your details to reply to your request.</p>
+  </form>
+  <div class="sent" id="quoteSent" hidden>
+    <div class="icon-box"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-check"/></svg></div>
+    <h2>Thank you</h2>
+    <p>We received your request and will be in touch. If it is urgent, mention that in your next message.</p>
+    <button type="button" class="btn btn-outline" data-close-quote>Close</button>
+  </div>
+</dialog>
+<script src="site.js" defer></script>
 
 </body>
 </html>
