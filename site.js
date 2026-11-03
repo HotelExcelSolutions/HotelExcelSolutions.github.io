@@ -57,6 +57,14 @@
     if (nav && e.target.closest('#nav a')) closeMenu();
   });
 
+  // A link from the live demo (?interest=Bank%20Reconciliations#quote) opens the form on that topic, then tidies the address.
+  if (location.hash === '#quote' || /[?&]interest=/.test(location.search)) {
+    var m = /[?&]interest=([^&#]*)/.exec(location.search), interest = '';
+    try { interest = m ? decodeURIComponent(m[1].replace(/\+/g, ' ')) : ''; } catch (err) { interest = ''; }
+    openQuote(interest);
+    if (window.history && history.replaceState) history.replaceState(null, '', location.pathname);
+  }
+
   if (menuBtn && nav) {
     menuBtn.addEventListener('click', function () {
       var open = nav.classList.toggle('open');
