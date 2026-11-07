@@ -340,6 +340,7 @@ dialog.quote::backdrop { background: rgba(10, 32, 56, .62); backdrop-filter: blu
 .plan-list .ico { color: var(--teal-d); margin-top: .15rem; stroke-width: 2.4; width: 1.05em; height: 1.05em; }
 .plan .btn { margin-top: auto; }
 .plan.picked { border-color: var(--teal); box-shadow: 0 0 0 2px var(--teal-l), var(--shadow); }
+.card .plan-ask { font-size: 1.45rem; font-weight: 800; color: var(--navy); letter-spacing: -.02em; line-height: 1.2; margin: .35rem 0 0; }
 .price-note { text-align: center; color: var(--muted); font-size: .9rem; margin: 1.6rem 0 0; }
 
 .estimate { display: grid; grid-template-columns: 1.35fr 1fr; gap: 1.4rem; align-items: start; }
