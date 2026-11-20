@@ -62,15 +62,31 @@
     var m = /[?&]interest=([^&#]*)/.exec(location.search), interest = '';
     try { interest = m ? decodeURIComponent(m[1].replace(/\+/g, ' ')) : ''; } catch (err) { interest = ''; }
     openQuote(interest);
-    if (window.history && history.replaceState) history.replaceState(null, '', location.pathname);
+    // keep any other parameters (campaign tags such as utm_source): only interest and #quote are removed
+    var rest = location.search.replace(/^\?/, '').split('&').filter(function (p) { return p && !/^interest=/.test(p); }).join('&');
+    if (window.history && history.replaceState) history.replaceState(null, '', location.pathname + (rest ? '?' + rest : ''));
   }
 
   if (menuBtn && nav) {
-    menuBtn.addEventListener('click', function () {
+    var toggleMenu = function () {
       var open = nav.classList.toggle('open');
       menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      // the menu comes before its button in the page, so Tab would skip it: move to its first link
+      if (open) { var first = nav.querySelector('a'); if (first) first.focus(); }
+    };
+    menuBtn.addEventListener('click', toggleMenu);
+    // Enter and Space open it from the keyboard (handled here so the key never toggles it twice)
+    menuBtn.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleMenu(); } });
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape' || !(nav.classList.contains('open') || nav.contains(document.activeElement))) return;
+      closeMenu(); menuBtn.focus();
     });
-    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
+    // Tab past the last link (or Shift+Tab before the first) closes the menu and goes back to its button
+    nav.addEventListener('keydown', function (e) {
+      if (e.key !== 'Tab' || !nav.classList.contains('open')) return;
+      var links = nav.querySelectorAll('a'), first = links[0], last = links[links.length - 1];
+      if ((!e.shiftKey && document.activeElement === last) || (e.shiftKey && document.activeElement === first)) { e.preventDefault(); closeMenu(); menuBtn.focus(); }
+    });
   }
 
   if (form) {

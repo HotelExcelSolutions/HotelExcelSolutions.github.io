@@ -79,8 +79,12 @@
     if (el) el.value = value;
   }
 
+  var lastKey = null;
   function fillRequest(key) {
     var p = key ? PLANS[key] : null;
+    // demo times typed for one plan are not carried to another
+    if (key !== lastKey) demoBox.value = '';
+    lastKey = key;
     var annual = state.billing === 'annual';
     if (!p) {
       title.textContent = DEFAULT_TITLE; intro.textContent = DEFAULT_INTRO;

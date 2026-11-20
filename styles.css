@@ -272,7 +272,7 @@ dialog.quote::backdrop { background: rgba(10, 32, 56, .62); backdrop-filter: blu
   .header-cta { margin-left: 0; }
   .header-cta .btn-outline { display: none; }
   .nav { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; background: #fff; border-bottom: 1px solid var(--line); padding: .6rem 1.25rem 1rem; box-shadow: 0 18px 30px rgba(10, 32, 56, .12); }
-  .nav.open { display: flex; }
+  .nav.open { display: flex; max-height: calc(100vh - 4.5rem); max-height: calc(100dvh - 4.5rem); overflow-y: auto; }   /* phones held sideways: the menu scrolls instead of cutting links off */
   .nav a { padding: .85rem .6rem; font-size: 1.02rem; }
   .nav .nav-login { display: block; border: 2px solid var(--navy); text-align: center; margin-top: .5rem; }
   .menu-btn { margin-left: auto; }
